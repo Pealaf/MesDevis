@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @SpringBootTest
 @ActiveProfiles("test")
-public class git ArticleServiceTest {
+public class ArticleServiceTest {
 
     @Autowired
     private ArticleRepository articleRepository;

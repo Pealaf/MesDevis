@@ -113,7 +113,7 @@ public class CommercialController {
     @PutMapping(value = "/commercial/validerDevis/{idCommercial}/{idDevis}", produces = "application/json")
     public String validerDevis(@PathVariable long idCommercial, @PathVariable long idDevis) {
         // Récupération du validateur du devis
-        ResponseEntity<CommercialDTO> validateur = getValidateur(idCommercial);
+        ResponseEntity<CommercialDTO> validateur = getValidateur(idDevis);
         // Récupération du commercial qui effectue la validation
         Optional<CommercialDTO> commercial = commercialService.findById(idCommercial);
         // S'il s'agit de la même personne
